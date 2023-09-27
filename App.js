@@ -48,17 +48,6 @@ export default function App() {
             headerTintColor: "#73ac31",
           }}
         />
-        <Stack.Screen name="Entrar" component={Entrar}
-          options={{
-            title: "Entre",
-            headerStyle: {backgroundColor: '#785533',
-            shadowOffset: { width: 0, height: 2 }, 
-            shadowColor: 'black', 
-            shadowOpacity: 0.5,
-            shadowRadius: 4,  },
-            headerTintColor: "#73ac31",
-          }}
-        />
       </Stack.Navigator>
     </NavigationContainer>
   );

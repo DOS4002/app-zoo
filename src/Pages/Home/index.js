@@ -9,8 +9,8 @@ export default function Login({ navigation }) {
   return (
     <View style={styles.container}>
       <Image
-        source={require("./assets/images/zooApp.png")}
-        style={{ width: 400, height: 400 }}
+        source={require("./assets/images/squirrel.gif")}
+        style={{ width: 200, height: 200 }}
       />    
       <TouchableOpacity
         style={styles.button}

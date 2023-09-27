@@ -26,7 +26,6 @@ export default function LoginPage({ navigation }) {
       
       <TouchableOpacity
         style={styles.button}
-        onPress={() => navigation.navigate('Entrar')}
       >
         <Text style={styles.buttonText}>Já sou cadastrado</Text>
       </TouchableOpacity>
