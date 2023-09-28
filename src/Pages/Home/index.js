@@ -9,7 +9,7 @@ export default function Login({ navigation }) {
   return (
     <View style={styles.container}>
       <Image
-        source={require("./assets/images/squirrel.gif")}
+        source={require("./assets/images/appZoo.gif")} 
         style={{ width: 200, height: 200 }}
       />    
       <TouchableOpacity
