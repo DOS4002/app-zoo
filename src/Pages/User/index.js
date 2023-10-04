@@ -20,21 +20,21 @@ export default function LoginPage({ navigation }) {
         source={require("./assets/images/zooApp.png")}
         style={{ width: 200, height: 200 }}
       />  
-      <Text style={styles.title}>Bem-vindo!</Text>
+      <Text style={styles.title}>Seja bem-vindo ao AppZoo!</Text>
       
-      <Text style={styles.subtitle}>Entre para ver </Text>
+      <Text style={styles.subtitle}>Como você já é um dos nossos usuários do AppZoo, deseja entrar para ver o catálogo de animais   que teremos neste final de semana?</Text>
       
       <TouchableOpacity
         style={styles.button}
       >
-        <Text style={styles.buttonText}>Já sou cadastrado</Text>
+        <Text style={styles.buttonText}>Sim</Text>
       </TouchableOpacity>
       
       <TouchableOpacity
         style={styles.button1}
         onPress={() => navigation.navigate('Cadastro')}
       >
-        <Text style={styles.buttonText}>Novo usuário</Text>
+        <Text style={styles.buttonText}>Não</Text>
       </TouchableOpacity>
     </View>
   );
