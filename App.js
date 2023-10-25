@@ -1,6 +1,8 @@
 import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import { ActivityIndicator } from "react-native-web";
 import Home from './src/Pages/Home';
 import Login from "./src/Pages/Login";
 import Cadastro from "./src/Pages/Cadastro";
