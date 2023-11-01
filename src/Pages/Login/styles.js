@@ -1,71 +1,47 @@
 import { StyleSheet } from "react-native";
 
 export default StyleSheet.create({
-    container:{
-        flex: 1,
-        alignItems: "center",
-        justifyContent: "center",
-        backgroundColor: "#73ac31",
-    },
-
-        button: {
-            backgroundColor: "#785533",
-            padding: 10,
-            borderRadius: 10,
-            textAlign: "center",
-            borderBottomColor: "000",
-            width: 170,
-            shadowColor: "#000", // Cor da sombra
-            shadowOffset: {
-              width: 0,
-              height: 2,
-            },
-            shadowOpacity: 0.25, // Opacidade da sombra
-            shadowRadius: 3.84, // Raio da sombra
-            elevation: 5, // Elevação para Android (tem suporte limitado)
-          },
-
-          button1: {
-            backgroundColor: "#785533",
-            padding: 10,
-            borderRadius: 10,
-            textAlign: "center",
-            borderBottomColor: "000",
-            marginTop: 20,
-            width: 170,
-            shadowColor: "#000", // Cor da sombra
-            shadowOffset: {
-              width: 0,
-              height: 2,
-            },
-            shadowOpacity: 0.25, // Opacidade da sombra
-            shadowRadius: 3.84, // Raio da sombra
-            elevation: 5, // Elevação para Android (tem suporte limitado)
-          },
-
-          title: {
-            
-            marginTop: "10%",
-            fontSize: 30,
-            fontWeight: "bold",
-            marginBottom: 16,
-            color: "#fff",
-          },
-          subtitle: {
-            marginTop: "10%",
-            fontSize: 18,
-            marginBottom: 16,
-            color: "#fff",
-          },
-      
-      buttonPressed: {
-        backgroundColor: "#5bcdf7",
-      },
-      buttonText: {
-        fontWeight: "bold",
-        color: "#73ac31",
-        fontSize: 16,
-      },
-
+  container: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "#f9f9f9",
+  },
+  logo: {
+    width: 200,
+    height: 200,
+    marginBottom: 20,
+  },
+  title: {
+    fontFamily: "Poppins",
+    fontSize: 24,
+    fontWeight: "bold",
+    marginBottom: 10,
+  },
+  subtitle: {
+    fontFamily: 'Poppins',
+    fontSize: 13,
+    textAlign: "center",
+    marginBottom: 30,
+  },
+  button: {
+    backgroundColor: "#73ac31",
+    paddingVertical: 15,
+    paddingHorizontal: 40,
+    borderRadius: 25,
+    marginBottom: 15,
+  },
+  button1: {
+    backgroundColor: "#785533",
+    paddingVertical: 15,
+    paddingHorizontal: 40,
+    borderRadius: 25,
+  },
+  buttonText: {
+    fontFamily: 'Poppins',
+    color: "#ffffff",
+    fontSize: 16,
+    fontWeight: "bold",
+  },
      
 })
