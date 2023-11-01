@@ -3,16 +3,30 @@ import { StyleSheet } from "react-native";
 export default StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: "#73ac31",
+  },
+  containerLogo: {
+    flex: 2,
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: "#73ac31",
+  },
+  containerText: {
+    flex: 1,
+    textAlign: "center",
+    backgroundColor: "#fff",
+    borderTopLeftRadius: 25,
+    borderTopRightRadius: 25,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#f9f9f9",
   },
   logo: {
-    width: 200,
-    height: 200,
+    width: 350,
+    height: 350,
     marginBottom: 20,
   },
   title: {
+    textAlign: "center",
     fontFamily: "Poppins",
     fontSize: 24,
     fontWeight: "bold",

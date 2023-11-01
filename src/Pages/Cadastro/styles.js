@@ -3,50 +3,59 @@ import { StyleSheet } from "react-native";
 export default StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: "#f9f9f9",
-    padding: 20,
+    backgroundColor:"#73ac31",
   },
-  image: {
-    width: 200,
-    height: 200,
+  containerHeader: {
+    marginBottom: '8%',
+    marginTop: '14%',
+    paddingStart: '5%',
+    backgroundColor: "#73ac31",
+  },
+  title:{
+    fontFamily: 'Poppins',
+    fontSize: 30,
+    fontWeight: "bold",
     marginBottom: 10,
+    color: "#ffffff",
+  },
+  containerForm: {
+    flex: 1,
+    paddingStart: '5%',
+    borderTopLeftRadius: 25,
+    borderTopRightRadius: 25,
+    backgroundColor: "#ffffff",
+    paddingEnd: '5%',
   },
   label: {
-    
     fontFamily: 'Poppins',
-    alignSelf: "flex-start",
-    marginBottom: 5,
+    fontSize: 13,
+    marginTop: 20,
+
   },
-  label5: {
-    fontFamily: 'Poppins',
-    alignSelf: "flex-start",
-    marginBottom: 5,
-  },
+
   input: {
     
     fontFamily: 'Poppins',
-    height: 40,
+    height: 35,
     width: "100%",
     borderColor: "gray",
-    borderWidth: 1,
-    borderRadius: 7,
-    marginBottom: 10,
+    borderBottomWidth: 1,
+    marginBottom: 12,
     paddingLeft: 10,
   },
   button: {
-    backgroundColor: "#785533",
-    padding: 15,
-    borderRadius: 25,
-    width: "100%",
+    marginLeft: "15%",
     alignItems: "center",
-    marginTop: 20,
+    backgroundColor: "#785533",
+    padding: 10,
+    borderRadius: 25,
+    width: "70%",
+    marginTop: 50,
   },
   buttonText: {
     fontFamily: 'Poppins',
     color: "#ffffff",
-    fontSize: 16,
+    fontSize: 12,
     fontWeight: "bold",
   },
-})
+});

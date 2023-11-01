@@ -45,81 +45,80 @@ export default function App({ navigation }) {
 
   return (
     <View style={styles.container}>
-      <Image
-        source={require("./assets/images/happymk.png")}
-        style={styles.image}
-      />
-      <Text style={styles.label}>Nome</Text>
-      <TextInput
-        style={styles.input}
-        onChangeText={(text) => {
-          setNome(text);
-          checkIfReady();
-        }}
-        value={nome}
-        placeholder="Digite o seu nome"
-        placeholderTextColor="#A9A9A9"
-        placeholderStyle={{ fontSize: 16 }}
-        
-      />
+      <Animatable.View animation="bounceInLeft" style={styles.containerHeader}>
+        <Text style={styles.title}>Cadastre-se</Text>
+      </Animatable.View>
+      <Animatable.View animation="fadeInUp" style={styles.containerForm}>
+        <Text style={styles.label}>Nome</Text>
+        <TextInput
+          style={styles.input}
+          onChangeText={(text) => {
+            setNome(text);
+            checkIfReady();
+          }}
+          value={nome}
+          placeholder="Digite o seu nome"
+          placeholderTextColor="#A9A9A9"
+          placeholderStyle={{ fontSize: 16 }}
+          
+        />
 
-      <Text style={styles.label}>Telefone</Text>
-      <TextInput
-        style={styles.input}
-        onChangeText={(text) => {
-          setTelefone(text);
-          checkIfReady();
-        }}
-        value={telefone}
-        keyboardType="phone-pad"
-        placeholder="Digite o seu telefone"
-        placeholderTextColor="#A9A9A9"
-        placeholderStyle={{ fontSize: 16 }}
-      />
+        <Text style={styles.label}>Telefone</Text>
+        <TextInput
+          style={styles.input}
+          onChangeText={(text) => {
+            setTelefone(text);
+            checkIfReady();
+          }}
+          value={telefone}
+          keyboardType="phone-pad"
+          placeholder="Digite o seu telefone"
+          placeholderTextColor="#A9A9A9"
+          placeholderStyle={{ fontSize: 16 }}
+        />
 
-      <Text style={styles.label}>Email</Text>
-      <TextInput
-        style={styles.input}
-        onChangeText={(text) => {
-          setEmail(text);
-          checkIfReady();
-        }}
-        value={email}
-        keyboardType="email-address"
-        placeholder="Digite o seu email"
-        placeholderTextColor="#A9A9A9"
-        placeholderStyle={{ fontSize: 16 }}
-      />
+        <Text style={styles.label}>Email</Text>
+        <TextInput
+          style={styles.input}
+          onChangeText={(text) => {
+            setEmail(text);
+            checkIfReady();
+          }}
+          value={email}
+          keyboardType="email-address"
+          placeholder="Digite o seu email"
+          placeholderTextColor="#A9A9A9"
+          placeholderStyle={{ fontSize: 16 }}
+        />
 
-      <Text style={styles.label}>Senha</Text>
-      <TextInput
-        style={styles.input}
-        onChangeText={(text) => {
-          setSenha(text);
-          checkIfReady();
-        }}
-        value={senha}
-        secureTextEntry={true}
-        placeholder="Digite a sua senha"
-        placeholderTextColor="#A9A9A9"
-        placeholderStyle={{ fontSize: 16 }}
-      />
+        <Text style={styles.label}>Senha</Text>
+        <TextInput
+          style={styles.input}
+          onChangeText={(text) => {
+            setSenha(text);
+            checkIfReady();
+          }}
+          value={senha}
+          secureTextEntry={true}
+          placeholder="Digite a sua senha"
+          placeholderTextColor="#A9A9A9"
+          placeholderStyle={{ fontSize: 16 }}
+        />
 
-      <Text style={styles.label}>Confirmar Senha</Text>
-      <TextInput
-        style={styles.input}
-        onChangeText={(text) => {
-          setConfirmarSenha(text);
-          checkIfReady();
-        }}
-        value={confirmarSenha}
-        secureTextEntry={true}
-        placeholder="Confirme a sua senha"
-        placeholderTextColor="#A9A9A9"
-        placeholderStyle={{ fontSize: 16 }}
-      />
-
-    <Animatable.View animation="bounceIn" style={styles.button}>
+        <Text style={styles.label}>Confirmar Senha</Text>
+        <TextInput
+          style={styles.input}
+          onChangeText={(text) => {
+            setConfirmarSenha(text);
+            checkIfReady();
+          }}
+          value={confirmarSenha}
+          secureTextEntry={true}
+          placeholder="Confirme a sua senha"
+          placeholderTextColor="#A9A9A9"
+          placeholderStyle={{ fontSize: 16 }}
+        />
+         <Animatable.View animation="bounceIn" style={styles.button}>
           <TouchableOpacity >
             <Animatable.Text
               animation="bounceIn"
@@ -131,6 +130,9 @@ export default function App({ navigation }) {
             </Animatable.Text>
          </TouchableOpacity>
        </Animatable.View>
+      </Animatable.View>
+
+   
     </View>
   );
 }

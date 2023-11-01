@@ -29,11 +29,28 @@ export default StyleSheet.create({
     marginBottom: 20,
     textAlign: 'center',
   },
+  input: {
+    
+    fontFamily: 'Poppins',
+    height: 40,
+    width: "100%",
+    borderColor: "gray",
+    borderWidth: 1,
+    borderRadius: 7,
+    marginBottom: 10,
+    paddingLeft: 10,
+  },
+  label: {
+    color: "#fff",
+    fontFamily: 'Poppins',
+    alignSelf: "flex-start",
+    marginBottom: 5,
+  },
   button: {
     backgroundColor: '#73ac31',
-    padding: 15,
+    padding: 10,
     borderRadius: 25,
-    width: '100%',
+    width: '40%',
     alignItems: 'center',
     marginBottom: 15,
   },
@@ -48,7 +65,7 @@ export default StyleSheet.create({
   buttonText: {
     fontFamily: 'Poppins',
     color: '#ffffff',
-    fontSize: 16,
+    fontSize: 12,
     fontWeight: 'bold',
   },
   footer: {
@@ -62,5 +79,17 @@ export default StyleSheet.create({
     textDecorationLine: 'underline',
   },
 
+  link: {
+    color: "white",
+    textDecorationLine: "underline",
+  },
      
+  noAccount: {
+    padding: 5,
+    fontSize: 10,
+    color: "#fff",
+    fontFamily: 'Poppins',
+    alignSelf: "flex-start",
+    marginBottom: 5,
+  },
 })
