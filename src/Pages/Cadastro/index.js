@@ -1,10 +1,12 @@
 import React, { useState } from "react";
-import { View, Text, TextInput, TouchableOpacity, StyleSheet, Image } from "react-native";
+import { View, Text, TextInput, TouchableOpacity, StyleSheet, Image, ActivityIndicator } from "react-native";
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import styles from "./styles";
 import * as Animatable from 'react-native-animatable';
+import { isLoading } from "expo-font";
 
 export default function App({ navigation }) {
+  const [isLoading, setIsLoading] = useState(false); 
   const [nome, setNome] = useState("");
   const [idade, setIdade] = useState("");
   const [telefone, setTelefone] = useState("");
@@ -14,6 +16,7 @@ export default function App({ navigation }) {
   const [isReady, setIsReady] = useState(false); // Estado para controlar se o formulário está pronto para ser enviado
 
   const handleSubmit = async () => {
+     
     try {
       // Aqui você pode processar os dados do formulário e armazená-los no AsyncStorage
       const userData = {
@@ -27,11 +30,24 @@ export default function App({ navigation }) {
       await AsyncStorage.setItem('userData', JSON.stringify(userData));
       console.log("Dados do usuário armazenados com sucesso!");
 
-      // Navegar para a página de usuários após o cadastro
-      navigation.navigate("User");
+      setIsLoading(true); // Define isLoading como true ao iniciar o carregamento
+
+    // Simulando uma chamada assíncrona, por exemplo, uma chamada de API
+    setTimeout(() => {
+      // Após a lógica de login, redefine isLoading como false
+      setIsLoading(false);
+  
+        navigation.navigate("User");
+    
+      
+    }, 2000); //
     } catch (error) {
       console.error("Erro ao armazenar os dados do usuário: ", error);
     }
+
+    
+
+    
   };
 
   // Função para verificar se todos os campos obrigatórios estão preenchidos
@@ -119,16 +135,23 @@ export default function App({ navigation }) {
           placeholderStyle={{ fontSize: 16 }}
         />
          <Animatable.View animation="bounceIn" style={styles.button}>
+          
+           
           <TouchableOpacity >
-            <Animatable.Text
-              animation="bounceIn"
-              style={styles.buttonText}
-              onPress={handleSubmit}
-              disabled={!isReady}
-            >
-              Enviar
-            </Animatable.Text>
+            {isLoading ? (
+              <ActivityIndicator size="small" color="#fff" />
+            ) : (
+              <Animatable.Text
+                animation="bounceIn"
+                style={styles.buttonText}
+                onPress={handleSubmit}
+                disabled={!isReady}
+              >
+                Enviar
+              </Animatable.Text>
+            )}
          </TouchableOpacity>
+          
        </Animatable.View>
       </Animatable.View>
 

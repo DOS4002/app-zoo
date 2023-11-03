@@ -6,12 +6,21 @@ import styles from "./styles";
 
 export default function LoginPage({ navigation }) {
 
+  const [isLoading, setIsLoading] = useState(false);
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
   const handleCadastro = () => {
     // Lógica para direcionar para a página de cadastro
     navigation.navigate("Cadastro");
   };
+
+
+  const handleLogin = () => {
+    setIsLoading(true);
+    setTimeout(() => {
+      setIsLoading(false);
+      navigation.navigate("Catalogo");
+    },2000)}
 
   return (
     <View style={styles.container}>
@@ -55,12 +64,17 @@ export default function LoginPage({ navigation }) {
        </Animatable.View>
       <Animatable.View animation="bounceIn" style={styles.button}>
           <TouchableOpacity >
-            <Animatable.Text
-              animation="bounceIn"
-              style={styles.buttonText}
-            >
-              Entrar
-            </Animatable.Text>
+            {isLoading ? (
+              <Text style={styles.buttonText}> Entrando... </Text>
+            ) : (
+              <Animatable.Text
+                animation="bounceIn"
+                style={styles.buttonText}
+                onPress={handleLogin}
+              >
+                Entrar
+              </Animatable.Text>
+            )}
          </TouchableOpacity>
        </Animatable.View>
       

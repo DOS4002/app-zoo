@@ -92,4 +92,4 @@ export default StyleSheet.create({
     alignSelf: "flex-start",
     marginBottom: 5,
   },
-})
+})  

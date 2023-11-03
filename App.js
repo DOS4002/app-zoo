@@ -1,14 +1,12 @@
+
 import React, {useEffect, useState} from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import AsyncStorage from '@react-native-async-storage/async-storage';
-import { ActivityIndicator } from "react-native-web";
-import Icon from 'react-native-vector-icons/FontAwesome';
 import Login from "./src/Pages/Login";
 import Cadastro from './src/Pages/Cadastro';
 import User from './src/Pages/User';
+import Catalogo from "./src/Pages/Catalogo";
 const Stack = createNativeStackNavigator();
-
 
 export default function App() { 
 
@@ -31,9 +29,12 @@ export default function App() {
             headerShown: false,
           }}
         />
-
+        <Stack.Screen name="Catalogo" component={Catalogo}
+            options={{
+              title: "Catalogo",
+            }}
+          />
       </Stack.Navigator>
-      
     </NavigationContainer>
   );
 }

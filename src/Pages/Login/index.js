@@ -38,23 +38,6 @@ export default function LoginPage({ navigation }) {
     }, 2000); // Simulando o tempo de resposta de 2 segundos
   };
 
-  const handleCadastro = async () => {
-    try {
-      // Define o AsyncStorage para indicar que o usuário já passou pela página de cadastro
-      await AsyncStorage.setItem('isUserRegistered', 'true');
-      setIsLoading(true); // Define isLoading como true ao iniciar o carregamento
-
-      // Simulando uma chamada assíncrona, por exemplo, uma chamada de API
-      setTimeout(() => {
-        // Após a lógica de login, redefine isLoading como false
-        setIsLoading(false);
-        navigation.navigate("Login");
-      }, 2000);
-    } catch (error) {
-      console.error("Erro ao definir o usuário como registrado: ", error);
-    }
-  };
-
   return (
     <View style={styles.container}>
       <View style={styles.containerLogo}>
