@@ -61,9 +61,6 @@ export default function App({ navigation }) {
 
   return (
     <View style={styles.container}>
-      <Animatable.View animation="bounceInLeft" style={styles.containerHeader}>
-        <Text style={styles.title}>Cadastre-se</Text>
-      </Animatable.View>
       <Animatable.View animation="fadeInUp" style={styles.containerForm}>
         <Text style={styles.label}>Nome</Text>
         <TextInput

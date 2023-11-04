@@ -1,11 +1,14 @@
 import React, { useState } from "react";
 import { View, Text, TouchableOpacity, StyleSheet, Image, TextInput, Modal} from "react-native";
-import { ModalText } from "../../../components/modal";
+import { ModalText } from "../../../components/Modal";
 import Icon from 'react-native-vector-icons/FontAwesome';
 import * as Animatable from 'react-native-animatable';
-import modal from '../../../components/modal';
+import modal from '../../../components/Modal';
+import { createDrawerNavigator } from "@react-navigation/drawer";
+import 'react-native-gesture-handler';
 import styles from "./styles";
-  
+
+
 export default function CatalogPage({ navigation }) {
     
   const [modalVisible, setModalVisible] = useState(true);
