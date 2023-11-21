@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { View, Text, TouchableOpacity, StyleSheet, Image, TextInput } from "react-native";
 import Icon from 'react-native-vector-icons/FontAwesome';
 import * as Animatable from 'react-native-animatable';
@@ -14,7 +14,23 @@ export default function LoginPage({ navigation }) {
     navigation.navigate("Cadastro");
   };
 
+  useEffect(() => {
+    checkUserRegistered(); // Verifica se o usuário já passou pela página de cadastro
+  }, []);
 
+  const checkUserRegistered = async () => {
+    try {
+      const value = await AsyncStorage.getItem('isUserRegistered');
+      if (value !== null) {
+        // Se o usuário já passou pela página de cadastro, redirecione-o para a página de usuário
+        navigation.navigate('Catalogo');
+      } else if (value === null){
+        navigation.navigate('Cadastro');
+      }
+    } catch (error) {
+      console.error("Erro ao verificar o cadastro do usuário: ", error);
+    }
+  };
   const handleLogin = () => {
     setIsLoading(true);
     setTimeout(() => {
@@ -37,7 +53,7 @@ export default function LoginPage({ navigation }) {
         <TextInput
         style={styles.input}
         onChangeText={(text) => {
-          setNome(text);
+          setEmail(text);
           checkIfReady();
         }}
         value={email}
@@ -50,7 +66,7 @@ export default function LoginPage({ navigation }) {
         <TextInput
         style={styles.input}
         onChangeText={(text) => {
-          setNome(text);
+          setSenha(text);
           checkIfReady();
         }}
         value={senha}

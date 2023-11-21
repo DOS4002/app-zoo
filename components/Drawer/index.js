@@ -5,7 +5,7 @@ import Catalogo from '../../src/Pages/Catalogo';
 
 
 const Drawer = createDrawerNavigator();
-export function Router() {
+export function Drawer() {
     return(
         <Drawer.Navigator>
           <Drawer.Screen name="Home" component={Catalogo}/>

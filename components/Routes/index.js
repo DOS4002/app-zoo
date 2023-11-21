@@ -1,16 +1,21 @@
-import React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import Login from "./src/Pages/Login";
-import Cadastro from './src/Pages/Cadastro';
-import User from './src/Pages/User';
-import Catalogo from "./src/Pages/Catalogo";
-import 'react-native-gesture-handler';
 
-const Stack = createNativeStackNavigator();  
-export default function App(){
-  return(
-    <NavigationContainer>
+import React from "react";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+
+import 'react-native-gesture-handler';
+import Animated from 'react-native-reanimated';
+import Reanimated from 'react-native-reanimated';
+import Login from "../../src/Pages/Login";
+import Cadastro from '../../src/Pages/Cadastro';
+import User from '../../src/Pages/User';
+import Catalogo from "../../src/Pages/Catalogo";
+
+const Stack = createNativeStackNavigator();
+   
+export default function Routes() {  
+
+  return (
+    
       <Stack.Navigator>
         <Stack.Screen name="Login" component={Login}
         options={{
@@ -55,6 +60,5 @@ export default function App(){
             })}
           />
       </Stack.Navigator>
-    </NavigationContainer>
-  )
-} 
+  );
+}

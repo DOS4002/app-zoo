@@ -31,6 +31,7 @@ export default StyleSheet.create({
   },
   input: {
     
+    color: '#fff',
     fontFamily: 'Poppins',
     height: 40,
     width: "100%",

@@ -8,21 +8,7 @@ import styles from "./styles";
 export default function LoginPage({ navigation }) {
   const [isLoading, setIsLoading] = useState(false); // Define o estado inicial como falso
 
-  useEffect(() => {
-    checkUserRegistered(); // Verifica se o usuário já passou pela página de cadastro
-  }, []);
-
-  const checkUserRegistered = async () => {
-    try {
-      const value = await AsyncStorage.getItem('isUserRegistered');
-      if (value !== null) {
-        // Se o usuário já passou pela página de cadastro, redirecione-o para a página de usuário
-        navigation.navigate('Login');
-      } 
-    } catch (error) {
-      console.error("Erro ao verificar o cadastro do usuário: ", error);
-    }
-  };
+ 
 
   const handleLogin = () => {
     setIsLoading(true); // Define isLoading como true ao iniciar o carregamento
