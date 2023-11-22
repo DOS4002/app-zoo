@@ -21,6 +21,7 @@
     "expo": "~49.0.16",
     "expo-font": "~11.6.0",
     "expo-status-bar": "~1.7.1",
+    "firebase": "^10.6.0",
     "link": "^2.1.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",

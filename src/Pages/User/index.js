@@ -3,6 +3,7 @@ import { View, Text, TouchableOpacity, StyleSheet, Image, TextInput } from "reac
 import Icon from 'react-native-vector-icons/FontAwesome';
 import * as Animatable from 'react-native-animatable';
 import styles from "./styles";
+import database from "../../config/firebaseconfig";
 
 export default function LoginPage({ navigation }) {
 
