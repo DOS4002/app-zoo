@@ -3,7 +3,6 @@ import { View, Text, TouchableOpacity, StyleSheet, Image, TextInput } from "reac
 import Icon from 'react-native-vector-icons/FontAwesome';
 import * as Animatable from 'react-native-animatable';
 import styles from "./styles";
-import database from "../../config/firebaseconfig";
 
 export default function LoginPage({ navigation }) {
 
@@ -48,39 +47,14 @@ export default function LoginPage({ navigation }) {
       />  
       <Text style={styles.title}>Conecte sua conta para ver o catálogo!</Text>
       
-      <Text style={styles.subtitle}>Você já é um dos nossos usuários do AppZoo? deseja entrar para ver o catálogo de animais que teremos neste final de semana?</Text>
       <Animatable.View animation="bounceIn" style={styles.button1}>
-        <Text style={styles.label}>Email</Text>
-        <TextInput
-        style={styles.input}
-        onChangeText={(text) => {
-          setEmail(text);
-          checkIfReady();
-        }}
-        value={email}
-        placeholder="Digite o seu email"
-        placeholderTextColor="#A9A9A9"
-        placeholderStyle={{ fontSize: 16 }}
-        
-         />
-          <Text style={styles.label}>Senha</Text>
-        <TextInput
-        style={styles.input}
-        onChangeText={(text) => {
-          setSenha(text);
-          checkIfReady();
-        }}
-        value={senha}
-        placeholder="Digite a sua senha"
-        placeholderTextColor="#A9A9A9"
-        placeholderStyle={{ fontSize: 16 }}
-        
-         />
+        <Text style={styles.label}>Seja parte da nossa comunidade! Cadastre-se agora para desbloquear todo o potencial de nossa plataforma. Junte-se a milhares de usuários que já estão aproveitando os benefícios exclusivos de ser membro.</Text>
+      
          <Text style={styles.noAccount}>Não tem uma conta? <TouchableOpacity onPress={handleCadastro}><Text style={styles.link}>Cadastre-se</Text></TouchableOpacity></Text>
 
        </Animatable.View>
-      <Animatable.View animation="bounceIn" style={styles.button}>
-          <TouchableOpacity >
+      <Animatable.View animation="bounceIn" style={styles.buttons}>
+          <TouchableOpacity style={styles.btYes}>
             {isLoading ? (
               <Text style={styles.buttonText}> Entrando... </Text>
             ) : (
@@ -89,7 +63,20 @@ export default function LoginPage({ navigation }) {
                 style={styles.buttonText}
                 onPress={handleLogin}
               >
-                Entrar
+                Sim
+              </Animatable.Text>
+            )}
+         </TouchableOpacity>
+          <TouchableOpacity style={styles.btNo}>
+            {isLoading ? (
+              <Text style={styles.buttonText}> Entrando... </Text>
+            ) : (
+              <Animatable.Text
+                animation="bounceIn"
+                style={styles.buttonText}
+                onPress={handleLogin}
+              >
+                Não
               </Animatable.Text>
             )}
          </TouchableOpacity>
@@ -98,7 +85,6 @@ export default function LoginPage({ navigation }) {
       
       
       <View style={styles.footer}>
-        <Text style={styles.footerText}>Esqueceu a senha?</Text>
         <Text style={styles.footerText}>Termos de uso</Text>
       </View>
     </View>

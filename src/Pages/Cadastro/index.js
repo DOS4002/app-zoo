@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, Image, ActivityIndicator } from "react-native";
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import styles from "./styles";
@@ -14,50 +14,6 @@ export default function App({ navigation }) {
   const [senha, setSenha] = useState("");
   const [confirmarSenha, setConfirmarSenha] = useState("");
   const [isReady, setIsReady] = useState(false); // Estado para controlar se o formulário está pronto para ser enviado
-
-  const handleSubmit = async () => {
-     
-    try {
-      // Aqui você pode processar os dados do formulário e armazená-los no AsyncStorage
-      const userData = {
-        nome: nome,
-        idade: idade,
-        telefone: telefone,
-        email: email,
-        senha: senha
-      };
-
-      await AsyncStorage.setItem('userData', JSON.stringify(userData));
-      console.log("Dados do usuário armazenados com sucesso!");
-
-      setIsLoading(true); // Define isLoading como true ao iniciar o carregamento
-
-    // Simulando uma chamada assíncrona, por exemplo, uma chamada de API
-    setTimeout(() => {
-      // Após a lógica de login, redefine isLoading como false
-      setIsLoading(false);
-  
-        navigation.navigate("User");
-    
-      
-    }, 2000); //
-    } catch (error) {
-      console.error("Erro ao armazenar os dados do usuário: ", error);
-    }
-
-    
-
-    
-  };
-
-  // Função para verificar se todos os campos obrigatórios estão preenchidos
-  const checkIfReady = () => {
-    if (nome && idade && telefone && email && senha && senha === confirmarSenha) {
-      setIsReady(true);
-    } else {
-      setIsReady(false);
-    }
-  };
 
   return (
     <View style={styles.container}>

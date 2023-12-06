@@ -7,7 +7,7 @@ export default StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     padding: 20,
-    backgroundColor: '#f9f9f9',
+    backgroundColor: '#1D1D1D',
   },
   logo: {
     width: 200,
@@ -19,6 +19,7 @@ export default StyleSheet.create({
     marginTop: -60,
     fontFamily: 'Poppins',
     fontSize: 24,
+    color: '#fff',
     fontWeight: 'bold',
     marginBottom: 10,
     textAlign: 'center',
@@ -26,14 +27,15 @@ export default StyleSheet.create({
   subtitle: {
     fontFamily: 'Poppins',
     fontSize: 13,
+    color: '#fff',
     marginBottom: 20,
     textAlign: 'center',
   },
   input: {
     
-    color: '#fff',
     fontFamily: 'Poppins',
     height: 40,
+    color: "#fff",
     width: "100%",
     borderColor: "gray",
     borderWidth: 1,
@@ -42,21 +44,30 @@ export default StyleSheet.create({
     paddingLeft: 10,
   },
   label: {
-    color: "#fff",
+    textAlign: 'center',
     fontFamily: 'Poppins',
     alignSelf: "flex-start",
+    color: "#fff",
     marginBottom: 5,
   },
-  button: {
-    backgroundColor: '#73ac31',
+  buttons: {
     padding: 10,
     borderRadius: 25,
     width: '40%',
+    justifyContent: 'center',
+    flexDirection: 'row',
     alignItems: 'center',
     marginBottom: 15,
   },
+  btYes: {
+    backgroundColor: '#73ac31',
+    marginRight: 10,
+  },
+  btNo: {
+    backgroundColor: '#e74c3c',
+  },
   button1: {
-    backgroundColor: '#785533',
+    backgroundColor: '#73ac31',
     padding: 15,
     borderRadius: 25,
     width: '100%',
@@ -67,7 +78,6 @@ export default StyleSheet.create({
     fontFamily: 'Poppins',
     color: '#ffffff',
     fontSize: 12,
-    fontWeight: 'bold',
   },
   footer: {
     flexDirection: 'row',

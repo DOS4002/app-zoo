@@ -10,7 +10,7 @@ export default StyleSheet.create({
         backgroundColor: "rgba(24, 24, 24, 0.6)",
     },
     content:{
-        backgroundColor: "#fff",
+        backgroundColor: "#1D1D1D",
         borderRadius: 10,
         width: "90%",
         paddingTop: 20,
@@ -22,10 +22,12 @@ export default StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         fontSize: 20,
+        color: '#f9f9f9',
         fontWeight: 'bold',
         marginBottom: 10,
     },
     subtitile:{
+        color: '#f9f9f9',
         textAlign: 'center',
         fontSize: 14,
         marginBottom: 10,
@@ -33,15 +35,15 @@ export default StyleSheet.create({
     },
     buttom:{
         top: 7,
-        backgroundColor: '#73ac31',
-        padding: 10,
+        backgroundColor: 'transparent',
         borderRadius: 25,
         width: '40%',
         alignItems: 'center',
         marginBottom: 10,
     },
     buttonText:{
-        color: '#fff',
+        color: '#73ac31',
+        fontFamily: 'Poppins',
         fontSize: 16,
         fontWeight: 'bold',
     }
