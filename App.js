@@ -118,7 +118,7 @@ export default function App(){
               backgroundColor: "#1D1D1D",
               borderBottomColor: "#1D1D1D",
             },
-            headerRight: () => <LogoTitle  />, // Adicione a imagem ao cabeçalho
+            headerRight: () => <LogoTitle  />,
           })}
         />
         <Stack.Screen
