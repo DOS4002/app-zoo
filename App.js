@@ -93,7 +93,7 @@ export default function App(){
             headerStyle: {
               backgroundColor: "#73ac31",
               borderBottomColor: "#73ac31",
-            }, // Aqui adicionamos a imagem no lado direito do cabeçalho
+            },
           }}
         />
         <Stack.Screen
