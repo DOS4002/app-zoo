@@ -136,7 +136,7 @@ export default function App(){
               backgroundColor: "#1D1D1D",
               borderBottomColor: "#1D1D1D",
             },
-            headerLeft: () => <LogoTitle2 navigation={navigation} />, // Adicione a imagem ao cabeçalho
+            headerLeft: () => <LogoTitle2 navigation={navigation} />,
           })}
         />
       </Stack.Navigator>
