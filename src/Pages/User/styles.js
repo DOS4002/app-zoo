@@ -67,7 +67,7 @@ export default StyleSheet.create({
     
   },
   btNo: {
-    backgroundColor: '#e74c3c',
+    backgroundColor: '#84401d',
     padding: 10, 
     border radius: 25,
   },
