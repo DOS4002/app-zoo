@@ -12,9 +12,13 @@ import { Image, TouchableOpacity } from 'react-native';
 import 'react-native-gesture-handler';
 
 
+const [menuVisible, setMenuVisible] = useState(false); 
 const LogoTitle = () => {
+  const openModal = () => {
+       setMenuVisible(true);
+  };
   return (
-    <TouchableOpacity>
+    <TouchableOpacity onPress={openModal}>
       <Image
         source={require('./assets/settings.png')}
         style={{ width: 30, height: 30, marginRight: 10 }}
@@ -39,7 +43,7 @@ export default function App(){
 
   useEffect(() => {
     checkFirstTimeUser();
-  }, []);
+  }, []); 
 
   const checkFirstTimeUser = async () => {
     try {
