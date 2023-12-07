@@ -1,12 +1,12 @@
-import { StyleSheet, Dimensions } from "react-native";
+import { StyleSheet } from "react-native";
 
-const {width} = Dimensions.get("window");
 export default StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: "flex-start",
     padding: 10,
     backgroundColor: "#1D1D1D",
+    overflow: "hidden",
   },
   card:{
     width: "50%", 

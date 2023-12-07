@@ -1,5 +1,5 @@
   import React, { useState, useEffect } from "react";
-  import { View, Text, TouchableOpacity, StyleSheet, Image, Modal, FlatList, Dimensions, ImageBackground} from "react-native";
+  import { View, Text, TouchableOpacity, Modal, ImageBackground} from "react-native";
   import { ModalText } from "../../../components/Modal";
   import Icon from 'react-native-vector-icons/FontAwesome';
   import * as Animatable from 'react-native-animatable';
@@ -8,30 +8,8 @@
   import styles from "./styles";
   export default function CatalogPage({ navigation }) {
     
-    const {width} = Dimensions.get("window");
 
     const [modalVisible, setModalVisible] = useState(true);
-    const [activeIndex, setActiveIndex] = useState(0);
-
-    
-    /*const catalogData = [
-      {
-        id: 1,
-        url: 'https://c0.wallpaperflare.com/preview/206/737/155/zoo-italy-bologna-olhos.jpg'
-      },
-      {
-        id: 2,
-        url: 'https://c0.wallpaperflare.com/preview/22/58/365/zoo-italy-bologna-zoologico.jpg'
-      },
-      {
-        id: 3,
-        url: 'https://c0.wallpaperflare.com/preview/24/675/688/japan-tokyo-animais-bird.jpg'
-      },
-      {
-        id: 4,
-        url: 'https://c0.wallpaperflare.com/preview/880/585/91/zoo-italy-bologna-safari.jpg'
-      },
-    ];*/
 
     const cardsGrid = [
       {
@@ -67,8 +45,8 @@
     ];
 
 
-    const handleTerritorio = () => {
-      navigation.navigate("Territorio");
+    const handleTerritorio = (itemId) => {
+      navigation.navigate(`Territorio${itemId}`);
     };
     return (
       <View style={styles.container}>
@@ -77,7 +55,7 @@
         <TouchableOpacity
           key={index}
           style={styles.card}
-          onPress={() => handleTerritorio()}
+          onPress={() => handleTerritorio(item.id)}
         >
           <View style={styles.cardImageContainer}>
             <ImageBackground
