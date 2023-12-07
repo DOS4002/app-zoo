@@ -13,7 +13,7 @@ export default function App({ navigation }) {
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
   const [confirmarSenha, setConfirmarSenha] = useState("");
-  const [isReady, setIsReady] = useState(false); // Estado para controlar se o formulário está pronto para ser enviado
+  const [isReady, setIsReady] = useState(false);
 
   return (
     <View style={styles.container}>

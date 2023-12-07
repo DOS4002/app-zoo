@@ -62,9 +62,14 @@ export default StyleSheet.create({
   btYes: {
     backgroundColor: '#73ac31',
     marginRight: 10,
+    padding: 10, 
+    border radius: 25, 
+    
   },
   btNo: {
-    backgroundColor: '#e74c3c',
+    backgroundColor: '#84401d',
+    padding: 10, 
+    border radius: 25,
   },
   button1: {
     backgroundColor: '#73ac31',

@@ -16,13 +16,21 @@ import 'react-native-gesture-handler';
 
 const [modalVisible, setModalVisible] = useState(false);
 
+<<<<<<< HEAD
 const toggleModal = () => {
   setModalVisible(!modalVisible);
 }
 
 const LogoTitle = ({onPress}) => {
+=======
+const [menuVisible, setMenuVisible] = useState(false); 
+const LogoTitle = () => {
+  const openModal = () => {
+       setMenuVisible(true);
+  };
+>>>>>>> 15531651c138e817889a04844ce363f13a5c74f7
   return (
-    <TouchableOpacity>
+    <TouchableOpacity onPress={openModal}>
       <Image
         source={require('./assets/settings.png')}
         style={{ width: 30, height: 30, marginRight: 10 }}
@@ -47,7 +55,38 @@ const LogoTitle2 = ({navigation}) => {
 
 export default function App(){
 
+<<<<<<< HEAD
  const Stack = createNativeStackNavigator();
+=======
+  useEffect(() => {
+    checkFirstTimeUser();
+  }, []); 
+
+  const checkFirstTimeUser = async () => {
+    try {
+      const userAlreadyEntered = await AsyncStorage.getItem('@user_entered');
+      
+      if (!userAlreadyEntered) {
+        await AsyncStorage.setItem('@user_entered', 'true');
+        navigateToCadastro(); // Redireciona para a página de cadastro
+      } else {
+        navigateToUser(); // Redireciona para a página de usuário
+      }
+    } catch (error) {
+      console.error('Erro ao verificar o usuário:', error);
+    }
+  };
+
+  const Stack = createNativeStackNavigator();
+
+  const navigateToCadastro = () => {
+    navigation.navigate('Cadastro');
+  };
+
+  const navigateToUser = () => {
+    navigation.navigate('User');
+  };
+>>>>>>> 15531651c138e817889a04844ce363f13a5c74f7
   return(
     <NavigationContainer>
       <Stack.Navigator>
@@ -133,6 +172,7 @@ export default function App(){
               borderBottomColor: "#1D1D1D",
             },
             headerLeft: () => <LogoTitle2 navigation={navigation} />,
+<<<<<<< HEAD
           })}
         />
         <Stack.Screen
@@ -187,6 +227,8 @@ export default function App(){
               borderBottomColor: "#1D1D1D",
             },
             headerLeft: () => <LogoTitle2 navigation={navigation} />,
+=======
+>>>>>>> 15531651c138e817889a04844ce363f13a5c74f7
           })}
         />
       </Stack.Navigator>
