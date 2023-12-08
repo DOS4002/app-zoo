@@ -4,8 +4,6 @@ Bem-vindo ao ZooApp! Um aplicativo mobile para explorar o mundo dos animais.
 
 ## Descrição
 
-<img src="C:\Users\diego\OneDrive\Imagens\Capturas de tela\Captura de Tela (187).png">
-
 O ZooApp é um aplicativo desenvolvido em React Native que permite aos usuários explorar um catálogo de animais, aprender sobre diferentes espécies, e se conectar com outros entusiastas de animais.
 
 ## Funcionalidades Principais
