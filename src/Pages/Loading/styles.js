@@ -53,7 +53,7 @@ export default StyleSheet.create({
   buttons: {
     padding: 10,
     borderRadius: 25,
-    width: '40%',
+    width: '60%',
     justifyContent: 'center',
     flexDirection: 'row',
     alignItems: 'center',
@@ -72,7 +72,7 @@ export default StyleSheet.create({
     borderRadius: 25,
   },
   button1: {
-    marginTop: 10,
+    marginTop: 20,
     backgroundColor: '#73ac31',
     padding: 15,
     borderRadius: 25,

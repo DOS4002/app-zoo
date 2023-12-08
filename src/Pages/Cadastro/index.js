@@ -15,6 +15,24 @@ export default function App({ navigation }) {
   const [confirmarSenha, setConfirmarSenha] = useState("");
   const [isReady, setIsReady] = useState(false);
 
+
+  AsyncStorage.setItem('Diego', nome);
+  const handleSubmit = async () => {
+    if (nome && email && senha) {
+      if (senha === confirmarSenha) {
+        try {
+          await AsyncStorage.setItem('nome', nome);
+          navigation.navigate('Cadastro', { nome });
+        } catch (error) {
+          console.error("Erro ao salvar os dados:", error);
+        }
+      } else {
+        alert("A senha e a confirmação de senha devem ser iguais.");
+      }
+    } else {
+      alert("Por favor, preencha todos os campos obrigatórios.");
+    }
+  };
   return (
     <View style={styles.container}>
       <Animatable.View animation="fadeInUp" style={styles.containerForm}>
@@ -23,7 +41,6 @@ export default function App({ navigation }) {
           style={styles.input}
           onChangeText={(text) => {
             setNome(text);
-            checkIfReady();
           }}
           value={nome}
           placeholder="Digite o seu nome"
@@ -37,7 +54,6 @@ export default function App({ navigation }) {
           style={styles.input}
           onChangeText={(text) => {
             setTelefone(text);
-            checkIfReady();
           }}
           value={telefone}
           keyboardType="phone-pad"
@@ -51,7 +67,6 @@ export default function App({ navigation }) {
           style={styles.input}
           onChangeText={(text) => {
             setEmail(text);
-            checkIfReady();
           }}
           value={email}
           keyboardType="email-address"
@@ -65,10 +80,9 @@ export default function App({ navigation }) {
           style={styles.input}
           onChangeText={(text) => {
             setSenha(text);
-            checkIfReady();
+            secureTextEntry;
           }}
           value={senha}
-          secureTextEntry={true}
           placeholder="Digite a sua senha"
           placeholderTextColor="#A9A9A9"
           placeholderStyle={{ fontSize: 16 }}
@@ -79,10 +93,8 @@ export default function App({ navigation }) {
           style={styles.input}
           onChangeText={(text) => {
             setConfirmarSenha(text);
-            checkIfReady();
           }}
           value={confirmarSenha}
-          secureTextEntry={true}
           placeholder="Confirme a sua senha"
           placeholderTextColor="#A9A9A9"
           placeholderStyle={{ fontSize: 16 }}

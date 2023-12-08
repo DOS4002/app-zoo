@@ -5,23 +5,16 @@ import * as Animatable from 'react-native-animatable';
 
 import styles from "./styles";
 
-export default function LoginPage({ navigation }) {
-  const [isLoading, setIsLoading] = useState(false); // Define o estado inicial como falso
 
- 
+export default function Home({ navigation }) {
+  const [isLoading, setIsLoading] = useState(false); 
 
   const handleLogin = () => {
-    setIsLoading(true); // Define isLoading como true ao iniciar o carregamento
-
-    // Simulando uma chamada assíncrona, por exemplo, uma chamada de API
+    setIsLoading(true); 
     setTimeout(() => {
-      // Após a lógica de login, redefine isLoading como false
       setIsLoading(false);
-  
         navigation.navigate("User");
-    
-      
-    }, 2000); // Simulando o tempo de resposta de 2 segundos
+    }, 2000);
   };
 
   return (
@@ -39,7 +32,7 @@ export default function LoginPage({ navigation }) {
 
         <Text style={styles.subtitle}>Faça login para explorar o catálogo de animais.</Text>
 
-        {isLoading ? ( // Renderiza o ActivityIndicator se isLoading for true
+        {isLoading ? ( 
           <ActivityIndicator size="large" color="#0000ff" />
         ) : (
           <>
